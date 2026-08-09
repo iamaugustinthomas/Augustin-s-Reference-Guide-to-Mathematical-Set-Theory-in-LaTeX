@@ -136,7 +136,7 @@ If your symbols look too crowded, inject small spaces using these spacer command
 
 ## Print-Ready PDF
 A beautifully typeset, printable version compiled directly from the LaTeX source code is available.  
-**[Download Augustin's PDF Guide](./augustins_set_theory.pdf)**
+**[Download Augustin's PDF Guide](./set_theory_reference.pdf)**
 
 ---
 **Maintainer:** [iamaugustinthomas](https://github.com)  
