@@ -97,6 +97,26 @@ Because curly braces `{ }` are used for grouping code in LaTeX, you must escape 
 
 ---
 
+## Venn Diagrams (using TikZ)
+To draw Venn diagrams, the standard approach in LaTeX is to use the `tikz` package. You must include `\usepackage{tikz}` in your document preamble. 
+
+**Basic Two-Set Venn Diagram:**
+  ```latex
+  \begin{tikzpicture}
+    % Draw Set A
+    \draw (0,0) circle (1.5cm) node[below left] {$A$};
+    
+    % Draw Set B
+    \draw (1.5,0) circle (1.5cm) node[below right] {$B$};
+    
+    % Label the intersection
+    \node at (0.75,0) {$A \cap B$};
+  \end{tikzpicture}
+  ```
+*(Note: TikZ environments cannot be rendered directly in standard Markdown math mode. Compiling the above code in a standard LaTeX editor will produce two overlapping circles labeled A and B, with their intersection labeled in the center.)*
+
+---
+
 ## Formatting Tips
 
 ### 1. Text Inside Math Mode
