@@ -22,4 +22,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated PDF generation [skip ci]"
-          file_pattern: "set_theory_reference.tex.pdf"
+          file_pattern: "set_theory_reference.pdf"
