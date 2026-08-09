@@ -1,0 +1,190 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{float} % Added to control table placement
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\title{Augustin's Reference Guide to Mathematical Set Theory in \LaTeX}
+\author{\href{https://github.com/iamaugustinthomas}{Augustin Thomas}}
+\date{}
+
+\begin{document}
+\maketitle
+
+A comprehensive reference guide for formatting mathematical sets, operations, quantifiers, and intervals in \LaTeX{}. Curated and maintained by \textbf{\href{https://github.com/iamaugustinthomas}{Augustin Thomas}}.
+
+All commands below must be wrapped in math mode delimiters (\verb|$| or \verb|\[ \]|).
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
+
+\section*{\textbf{\Large Quick Reference}}
+
+\subsection*{1. Common Number Sets (Blackboard Bold)}
+\textbf{Note:} To use these symbols, you must include \verb|\usepackage{amssymb}| or \verb|\usepackage{amsfonts}| in your document's preamble.
+
+% Changed to [H] to force exact placement
+\begin{table}[H]
+\centering
+\begin{tabular}{llc}
+\toprule
+\textbf{Set Name} & \textbf{\LaTeX{} Code} & \textbf{Rendered Output} \\
+\midrule
+\textbf{Natural Numbers} & \verb|\mathbb{N}| & $\mathbb{N}$ \\
+\textbf{Integers} & \verb|\mathbb{Z}| & $\mathbb{Z}$ \\
+\textbf{Rational Numbers} & \verb|\mathbb{Q}| & $\mathbb{Q}$ \\
+\textbf{Real Numbers} & \verb|\mathbb{R}| & $\mathbb{R}$ \\
+\textbf{Complex Numbers} & \verb|\mathbb{C}| & $\mathbb{C}$ \\
+\textbf{Empty Set} & \verb|\emptyset| or \verb|\varnothing| & $\emptyset$ or $\varnothing$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{2. Core Set Operations}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llc}
+\toprule
+\textbf{Operation} & \textbf{\LaTeX{} Code} & \textbf{Rendered Output} \\
+\midrule
+\textbf{Union} & \verb|A \cup B| & $A \cup B$ \\
+\textbf{Intersection} & \verb|A \cap B| & $A \cap B$ \\
+\textbf{Set Difference / Minus} & \verb|A \setminus B| & $A \setminus B$ \\
+\textbf{Cartesian Product} & \verb|A \times B| & $A \times B$ \\
+\textbf{Symmetric Difference} & \verb|A \triangle B| & $A \triangle B$ \\
+\textbf{Complement} & \verb|A^c| or \verb|A'| & $A^c$ or $A'$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{3. Relations and Membership}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llc}
+\toprule
+\textbf{Meaning} & \textbf{\LaTeX{} Code} & \textbf{Rendered Output} \\
+\midrule
+\textbf{Element of / Belongs to} & \verb|x \in A| & $x \in A$ \\
+\textbf{Not an element of} & \verb|x \notin A| & $x \notin A$ \\
+\textbf{Subset of (or equal to)} & \verb|A \subseteq B| & $A \subseteq B$ \\
+\textbf{Strict / Proper Subset} & \verb|A \subset B| or \verb|A \subsetneq B| & $A \subset B$ or $A \subsetneq B$ \\
+\textbf{Superset of} & \verb|A \supseteq B| & $A \supseteq B$ \\
+\textbf{Not a subset of} & \verb|A \nsubseteq B| & $A \nsubseteq B$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{4. Quantifiers and Logic}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llc}
+\toprule
+\textbf{Meaning} & \textbf{\LaTeX{} Code} & \textbf{Rendered Output} \\
+\midrule
+\textbf{For all / For each} & \verb|\forall| & $\forall$ \\
+\textbf{There exists} & \verb|\exists| & $\exists$ \\
+\textbf{There exists a unique} & \verb|\exists!| & $\exists!$ \\
+\textbf{Does not exist} & \verb|\nexists| & $\nexists$ \\
+\textbf{Implies} & \verb|\implies| & $\implies$ \\
+\textbf{If and only if (Equivalent)} & \verb|\iff| & $\iff$ \\
+\textbf{Therefore} & \verb|\therefore| & $\therefore$ \\
+\textbf{Because / Since} & \verb|\because| & $\because$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{5. Intervals and Bounds}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llc}
+\toprule
+\textbf{Interval Type} & \textbf{\LaTeX{} Code} & \textbf{Rendered Output} \\
+\midrule
+\textbf{Closed Interval} & \verb|[a, b]| & $[a, b]$ \\
+\textbf{Open Interval} & \verb|(a, b)| & $(a, b)$ \\
+\textbf{Left-Open, Right-Closed} & \verb|(a, b]| & $(a, b]$ \\
+\textbf{Left-Closed, Right-Open} & \verb|[a, b)| & $[a, b)$ \\
+\textbf{Infinity} & \verb|\infty| & $\infty$ \\
+\textbf{Negative Infinity} & \verb|-\infty| & $-\infty$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
+
+\section*{\textbf{\Large Large Indexed Operations}}
+
+\subsection*{Indexed Union}
+\begin{itemize}
+    \item \textbf{Inline Mode (}\verb|$...$|\textbf{):} \verb|$\bigcup_{i=1}^{n} A_i$| $\rightarrow \bigcup_{i=1}^{n} A_i$
+    \item \textbf{Display Mode (}\verb|\[...\]|\textbf{):} \verb|\[ \bigcup_{i=1}^{n} A_i \]| $\rightarrow$ \[ \bigcup_{i=1}^{n} A_i \]
+\end{itemize}
+
+\subsection*{Indexed Intersection}
+\begin{itemize}
+    \item \textbf{Inline Mode (}\verb|$...$|\textbf{):} \verb|$\bigcap_{i=1}^{n} A_i$| $\rightarrow \bigcap_{i=1}^{n} A_i$
+    \item \textbf{Display Mode (}\verb|\[...\]|\textbf{):} \verb|\[ \bigcap_{i=1}^{n} A_i \]| $\rightarrow$ \[ \bigcap_{i=1}^{n} A_i \]
+\end{itemize}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
+
+\section*{\textbf{\Large Set-Builder Notation \& Braces}}
+Because curly braces \verb|{ }| are used for grouping code in \LaTeX{}, you must escape them with a backslash \verb|\{ \}| to display them visually.
+
+\begin{itemize}
+    \item \textbf{Standard Notation:}
+\begin{verbatim}
+\{ x \in \mathbb{R} \mid x > 0 \}
+\end{verbatim}
+    \textit{Output:} $\{ x \in \mathbb{R} \mid x > 0 \}$
+
+    \item \textbf{Auto-Scaling Notation (For tall elements like fractions):}
+\begin{verbatim}
+\left\{ x \in \mathbb{Q} \;\middle\vert\; x = \frac{1}{n} \right\}
+\end{verbatim}
+    \textit{Output:} $\left\{ x \in \mathbb{Q} \;\middle\vert\; x = \frac{1}{n} \right\}$
+\end{itemize}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
+
+\section*{\textbf{\Large Formatting Tips}}
+
+\subsection*{1. Text Inside Math Mode}
+Use \verb|\text{...}| (requires \verb|\usepackage{amsmath}|) to add normal words inside your equations so they do not render in cramped math italics:
+\begin{verbatim}
+\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z} \quad \text{if } x < y
+\end{verbatim}
+\textit{Output:} $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z} \quad \text{if } x < y$
+
+\subsection*{2. Fine-Tuning Math Spacing}
+If your symbols look too crowded, inject small spaces using these spacer commands:
+\begin{itemize}
+    \item \verb|\,| (thin space)
+    \item \verb|\;| (medium space)
+    \item \verb|\quad| (large space equal to the width of one character)
+\end{itemize}
+
+\vspace{1em}
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{1em}
+\noindent \textbf{Maintainer:} \href{https://github.com/iamaugustinthomas}{iamaugustinthomas} \\
+\textbf{License:} MIT License. Feel free to fork, share, and modify!
+
+\end{document}
