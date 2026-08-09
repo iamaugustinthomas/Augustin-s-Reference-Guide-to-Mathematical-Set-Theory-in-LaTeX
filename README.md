@@ -81,19 +81,19 @@ All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
 ---
 
 ## Set-Builder Notation & Braces
-Because curly braces `{ }` are used for grouping code in LaTeX, you must escape them with a backslash `\{ \}` to display them visually.
+Because curly braces `{ }` are used for grouping code in LaTeX, you must escape them with a backslash `\{ \}` to display them visually. *(Note: `\lbrace` and `\rbrace` are used in the output below to prevent markdown parsers from incorrectly stripping the backslashes).*
 
 * **Standard Notation:**
   ```latex
   \{ x \in \mathbb{R} \mid x > 0 \}
   ```
-  *Output:* $\{ x \in \mathbb{R} \mid x > 0 \}$
+  *Output:* $\lbrace x \in \mathbb{R} \mid x > 0 \rbrace$
 
 * **Auto-Scaling Notation (For tall elements like fractions):**
   ```latex
   \left\{ x \in \mathbb{Q} \;\middle\vert\; x = \frac{1}{n} \right\}
   ```
-  *Output:* $\left\{ x \in \mathbb{Q} \;\middle|\; x = \frac{1}{n} \right\}$
+  *Output:* $\left\lbrace x \in \mathbb{Q} \;\middle|\; x = \frac{1}{n} \right\rbrace$
 
 ---
 
@@ -111,9 +111,6 @@ If your symbols look too crowded, inject small spaces using these spacer command
 * `\,` (thin space)
 * `\;` (medium space)
 * `\quad` (large space equal to the width of one character)
-
----
-
 
 ---
 **Maintainer:** [iamaugustinthomas](https://github.com)  
