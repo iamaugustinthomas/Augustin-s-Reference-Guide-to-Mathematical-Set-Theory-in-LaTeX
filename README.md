@@ -1,4 +1,5 @@
 # Augustin's Reference Guide to Mathematical Set Theory in LaTeX
+
 A comprehensive reference guide for formatting mathematical sets, operations, quantifiers, and intervals in LaTeX. Curated and maintained by **[Augustin Thomas](https://github.com/iamaugustinthomas)**.
 
 All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
@@ -71,11 +72,11 @@ All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
 
 ### Indexed Union
 * **Inline Mode (`$...$`):** `$\bigcup_{i=1}^{n} A_i$` $\rightarrow$ $\bigcup_{i=1}^{n} A_i$
-* **Display Mode (`\[...\]`):** `\[ \bigcup_{i=1}^{n} A_i \]` $\rightarrow$ $$\bigcup_{i=1}^{n} A_i$$
+* **Display Mode (`\[...\]`):** `\[\bigcup_{i=1}^{n} A_i\]` $\rightarrow$ $$\bigcup_{i=1}^{n} A_i$$
 
 ### Indexed Intersection
 * **Inline Mode (`$...$`):** `$\bigcap_{i=1}^{n} A_i$` $\rightarrow$ $\bigcap_{i=1}^{n} A_i$
-* **Display Mode (`\[...\]`):** `\[ \bigcap_{i=1}^{n} A_i \]` $\rightarrow$ $$ \bigcap_{i=1}^{n} A_i $$
+* **Display Mode (`\[...\]`):** `\[\bigcap_{i=1}^{n} A_i\]` $\rightarrow$ $$ \bigcap_{i=1}^{n} A_i $$
 
 ---
 
@@ -83,32 +84,37 @@ All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
 Because curly braces `{ }` are used for grouping code in LaTeX, you must escape them with a backslash `\{ \}` to display them visually.
 
 * **Standard Notation:**
+  ```latex
+  \{ x \in \mathbb{R} \mid x > 0 \}
+  ```
+  *Output:* $\{ x \in \mathbb{R} \mid x > 0 \}$
 
-  \{ x \(\in \mathbb{R} \mid\) x > 0 \}
-Output: {x∈R∣x>0}
-Auto-Scaling Notation (For tall elements like fractions):
-Code snippet
-\(\left\{ x \in \mathbb{Q} \;\middle\vert{}\; x = \frac{1}{n} \right\} \%\%\)MAGIT_PARSER_PROTECT%%  ```
-*Output:* $\left\{ x \in \mathbb{Q} \;\middle|\; x = \frac{1}{n} \right\}$
+* **Auto-Scaling Notation (For tall elements like fractions):**
+  ```latex
+  \left\{ x \in \mathbb{Q} \;\middle\vert\; x = \frac{1}{n} \right\}
+  ```
+  *Output:* $\left\{ x \in \mathbb{Q} \;\middle|\; x = \frac{1}{n} \right\}$
 
-Formatting Tips
-1. Text Inside Math Mode
-Use \text{...} (requires \usepackage{amsmath}) to add normal words inside your equations so they do not render in cramped math italics:
+---
 
-Code snippet
-\(\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z} \quad \text{if } x < y\)
-Output: ∀x∈Z,∃y∈Zif x<y
+## Formatting Tips
 
-2. Fine-Tuning Math Spacing
+### 1. Text Inside Math Mode
+Use `\text{...}` (requires `\usepackage{amsmath}`) to add normal words inside your equations so they do not render in cramped math italics:
+  ```latex
+  \forall x \in \mathbb{Z}, \exists y \in \mathbb{Z} \quad \text{if } x < y
+  ```
+*Output:* $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z} \quad \text{if } x < y$
+
+### 2. Fine-Tuning Math Spacing
 If your symbols look too crowded, inject small spaces using these spacer commands:
-\, (thin space)
-\; (medium space)
-\quad (large space equal to the width of one character)
-Print-Ready PDF
-A beautifully typeset, printable version compiled directly from the LaTeX source code is available.
+* `\,` (thin space)
+* `\;` (medium space)
+* `\quad` (large space equal to the width of one character)
 
-Download Augustin's PDF Guide
+---
 
-Maintainer: iamaugustinthomas
 
-License: MIT License. Feel free to fork, share, and modify!
+---
+**Maintainer:** [iamaugustinthomas](https://github.com)  
+**License:** MIT License. Feel free to fork, share, and modify!
