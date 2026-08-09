@@ -83,7 +83,7 @@ All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
 Because curly braces `{ }` are used for grouping code in LaTeX, you must escape them with a backslash `\{ \}` to display them visually.
 
 * **Standard Notation:**
-  ```latex
+
   \{ x \(\in \mathbb{R} \mid\) x > 0 \}
 Output: {x∈R∣x>0}
 Auto-Scaling Notation (For tall elements like fractions):
