@@ -133,5 +133,11 @@ If your symbols look too crowded, inject small spaces using these spacer command
 * `\quad` (large space equal to the width of one character)
 
 ---
+
+## Print-Ready PDF
+A beautifully typeset, printable version compiled directly from the LaTeX source code is available.  
+**[Download Augustin's PDF Guide](./augustins_set_theory.pdf)**
+
+---
 **Maintainer:** [iamaugustinthomas](https://github.com)  
 **License:** MIT License. Feel free to fork, share, and modify!
