@@ -16,6 +16,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: set_theory_reference.tex
+          compiler: pdflatex
 
       # New Step: Permanently commit the generated PDF back into your folder
       - name: Commit and Push PDF
