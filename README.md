@@ -67,6 +67,17 @@ All commands below must be wrapped in math mode delimiters (`$` or `\[ \]`).
 | **Negative Infinity** | `-\infty` | $-\infty$ |
 
 ---
+### 6. Power Sets, Collections, and Families
+When denoting families of sets, collections, topologies, or power sets, it is standard practice to use a calligraphic font. You can achieve this using the `\mathcal{}` command.
+
+| Concept | LaTeX Code | Rendered Output |
+| :--- | :--- | :--- |
+| **Power Set** | `\mathcal{P}(A)` or `2^A` | $\mathcal{P}(A)$ or $2^A$ |
+| **Family of Sets** | `\mathcal{F}` | $\mathcal{F}$ |
+| **Collection of Sets** | `\mathcal{C}` | $\mathcal{C}$ |
+| **Topology** | `\mathcal{T}` | $\mathcal{T}$ |
+
+---
 
 ## Large Indexed Operations
 
